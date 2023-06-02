@@ -1,0 +1,32 @@
+Book_id,Date_of_Entry,Genre_No,Author,Book_Title,Publisher_and_Address,Date_of_published_and_print,Number_of_Pages,Price,Mode_of_supply,Date_of_remove,Extra_details,Availability
+B001,2022-01-01,G01,Stephen King,The Shining-Penguin Books,Harper Collinins PVT.- London,2021-10-01,500,700,Donation,-,Donated by lahiru food city,Available
+B002,2022-01-01,G02,J.K. Rowling,Harry Potter and the Philosopher's Stone, Bloomsbury Publishing,2021-12-01,223,800,Sale,-,-,Available
+B003,2022-01-02,G03,Agatha Christie,Murder on the Orient Express, Harper Collins Publishers,2021-09-01,336,650,Reference,-,-,Available
+B004,2022-01-02,G04,James Patterson,Alex Cross Run Little, Brown and Company,2022-01-05,400,900,Sale,-,-,Available
+B005,2022-01-03,G05,George R. R. Martin,A Clash of Kings, Bantam Spectra,2021-06-29,768,1100,Sale,-,-,Available
+B006,2022-01-03,G06,Paulo Coelho,The Alchemist, HarperCollins,2021-11-23,197,350,Reference,-,-,Available
+B007,2022-01-04,G07,John Grisham,The Rooster Bar, Doubleday Books,2022-01-06,352,950,Sale,-,-,Available
+B008,2022-01-04,G08,Emily Bronte,Wuthering Heights, Wordsworth Classics,2021-07-05,288,450,Reference,-,-,Available
+B009,2022-01-05,G09,Jane Austen,Pride and Prejudice, Penguin Classics,2021-12-16,435,550,Donation,-,Donated by ABC Pvt. Ltd.,Available
+B010,2022-01-05,G10,Fyodor Dostoevsky,Crime and Punishment, Penguin Classics,2021-09-07,656,800,Sale,-,-,Available
+B011,2022-01-06,G01,Stephen King,It-Penguin Books,Harper Collinins PVT.- London,2021-11-11,1138,1200,Reference,-,-,Available
+B012,2022-01-06,G02,J.K. Rowling,Harry Potter and the Chamber of Secrets, Bloomsbury Publishing,2021-12-01,251,900,Sale,-,-,Available
+B013,2022-01-07,G03,Agatha Christie,Death on the Nile, Harper Collins Publishers,2021-11-25,336,750,Sale,-,-,Available
+B014,2022-01-07,G04,James Patterson,The People vs. Alex Cross, Little, Brown and Company,2022-01-05,448,950,Sale,-,-,Available
+B015,2022-01-08,G05,George R. R. Martin,A Storm of Swords, Bantam Spectra,2021-06-25,973,1300,Sale,-,-,Available
+B016,2022-01-09,G06,Paulo Coelho,The Valkyries, HarperCollins,2021-10-12,320,500,Sale,-,-,Available
+B017,2022-01-09,G07,John Grisham,The Firm, Doubleday Books,2022-01-03,512,850,Sale,-,-,Available
+B018,2022-01-10,G08,Emily Bronte,Jane Eyre, Wordsworth Classics,2021-08-19,624,600,Donation,-,Donated by XYZ Pvt. Ltd.,Available
+B019,2022-01-10,G09,Jane Austen,Emma, Penguin Classics,2021-11-30,512,550,Sale,-,-,Available
+B020,2022-01-11,G10,Fyodor Dostoevsky,The Brothers Karamazov, Penguin Classics,2021-09-22,824,950,Sale,-,-,Available
+B021,2022-01-11,G01,Stephen King,Pet Sematary,Harper Collinins PVT.- London,2021-11-18,560,700,Reference,-,-,Available
+B022,2022-01-12,G02,J.K. Rowling,Harry Potter and the Prisoner of Azkaban, Bloomsbury Publishing,2021-12-01,320,950,Sale,-,-,Available
+B023,2022-01-12,G03,Agatha Christie,And Then There Were None, Harper Collins Publishers,2021-11-30,288,700,Sale,-,-,Available
+B024,2022-01-13,G04,James Patterson,Cross Justice, Little, Brown and Company,2022-01-05,448,950,Sale,-,-,Available
+B025,2022-01-13,G05,George R. R. Martin,A Feast for Crows, Bantam Spectra,2021-06-23,784,1200,Sale,-,-,Available
+B026,2022-01-14,G06,Paulo Coelho,The Devil and Miss Prym, HarperCollins,2021-10-15,224,350,Donation,-,Donated by XYZ Bookstore,Available
+B027,2022-01-14,G07,John Grisham,The Pelican Brief, Doubleday Books,2022-01-02,416,800,Sale,-,-,Available
+B028,2022-01-15,G08,Emily Bronte,The Tenant of Wildfell Hall, Wordsworth Classics,2021-08-29,552,550,Sale,-,-,Available
+B029,2022-01-15,G09,Jane Austen,Sense and Sensibility, Penguin Classics,2021-11-15,512,650,Reference,-,-,Available
+B030,2022-01-16,G10,Fyodor Dostoevsky,The Idiot, Penguin Classics,2021-09-15,736,800,Sale,-,-,Available
+B031,2022-01-16,G01,Stephen King,Carrie,Harper Collinins PVT.- London,2021-11-25,304,500,Donation,-,Donated by XYZ Book Club,Available
