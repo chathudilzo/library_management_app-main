@@ -21,12 +21,12 @@ void main() async {
 
   Get.put(BarChartController());
   Get.put(PieChartController());
-  final admins = await loadloginData('assets/admin.csv');
+  //final admins = await loadloginData('assets/admin.csv');
   //final users = await loadUserCsvData('assets/Users.csv');
   //final books = await loadBooksCsvData('assets/Books.csv');
   //final issuedBooks = await loadIssuedBooksData('assets/Issuedbooks.csv');
 
-  await DBHelper.insertAdmin(admins);
+  //await DBHelper.insertAdmin(admins);
   //await DBHelper.insertUsers(users);
   //await DBHelper.insertBooks(books);
   //await DBHelper.insertIssuedBooks(issuedBooks);

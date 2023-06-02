@@ -19,7 +19,7 @@ class LoginController extends GetxController {
   }
 
   Future<void> login(String username, String password) async {
-    Get.snackbar('details', '$_admins');
+    //Get.snackbar('details', '$_admins');
     // if (_admins.isEmpty) {
     //   SharedPreferences prefs = await SharedPreferences.getInstance();
 
@@ -28,7 +28,7 @@ class LoginController extends GetxController {
     //   return;
     // }
     for (final admin in _admins) {
-      Get.snackbar('details', '${admin['username']} ${admin['password']}');
+      // Get.snackbar('details', '${admin['username']} ${admin['password']}');
 
       if (admin['username'] == username && admin['password'] == password) {
         SharedPreferences prefs = await SharedPreferences.getInstance();
