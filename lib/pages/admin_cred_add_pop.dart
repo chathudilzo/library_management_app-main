@@ -16,6 +16,9 @@ class _GmailAppPwAddPopState extends State<GmailAppPwAddPop> {
   final _gmailController = TextEditingController();
   final _PwController = TextEditingController();
   final _usernameController = TextEditingController();
+  final _currentPwController = TextEditingController();
+  final _currentusernameController = TextEditingController();
+
   final _upwController = TextEditingController();
 
   @override
@@ -27,6 +30,30 @@ class _GmailAppPwAddPopState extends State<GmailAppPwAddPop> {
             key: _formKey,
             child: Column(
               children: [
+                TextFormField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please Input Current Username';
+                    }
+                  },
+                  controller: _currentusernameController,
+                  decoration: InputDecoration(
+                      hintText: 'admin',
+                      label: Text('Current Username'),
+                      prefixIcon: Icon(Icons.person)),
+                ),
+                TextFormField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please Input Current Password';
+                    }
+                  },
+                  controller: _currentPwController,
+                  decoration: InputDecoration(
+                      hintText: 'Password',
+                      label: Text('Current Password'),
+                      prefixIcon: Icon(Icons.remove_red_eye)),
+                ),
                 TextFormField(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -54,7 +81,10 @@ class _GmailAppPwAddPopState extends State<GmailAppPwAddPop> {
                 TextFormField(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Input Password';
+                      return 'Please Input Gmail Address';
+                    }
+                    if (!value.contains('@gmail.com')) {
+                      return 'Invalid Gmail Address';
                     }
                   },
                   controller: _gmailController,
@@ -67,6 +97,9 @@ class _GmailAppPwAddPopState extends State<GmailAppPwAddPop> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please Input App Password';
+                    }
+                    if (value.length < 16) {
+                      return 'App Password must have 16 digits.';
                     }
                   },
                   controller: _PwController,
@@ -82,8 +115,13 @@ class _GmailAppPwAddPopState extends State<GmailAppPwAddPop> {
         ElevatedButton(
             onPressed: () async {
               if (_formKey.currentState!.validate()) {
-                DBHelper.addAdmin(_usernameController.text, _upwController.text,
-                    _gmailController.text, _PwController.text);
+                DBHelper.addAdmin(
+                    _currentusernameController.text,
+                    _currentPwController.text,
+                    _usernameController.text,
+                    _upwController.text,
+                    _gmailController.text,
+                    _PwController.text);
                 Navigator.of(context).pop();
               }
             },

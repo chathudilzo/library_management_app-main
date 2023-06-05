@@ -226,36 +226,109 @@ class _ProfileSettingState extends State<ProfileSetting> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            Text('Update Gmail & App Password',
+                                            Text('Gmail & App Password',
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     color: Color.fromARGB(
                                                         255, 64, 179, 255))),
                                             Expanded(child: Container()),
-                                            GestureDetector(
-                                              onTap: () {
-                                                showDialog(
-                                                    context: context,
-                                                    builder:
-                                                        (BuildContext context) {
-                                                      return GmailAppPwPop();
-                                                    });
-                                              },
-                                              child: Container(
-                                                width: 100,
-                                                height: 25,
-                                                decoration: BoxDecoration(
-                                                    boxShadow: [
-                                                      BoxShadow(blurRadius: 7)
-                                                    ],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    color: Colors.blueAccent),
-                                                child: Center(
-                                                    child: Text('Update')),
-                                              ),
-                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    showDialog(
+                                                        context: context,
+                                                        builder: (BuildContext
+                                                            context) {
+                                                          return GmailAppPwPop();
+                                                        });
+                                                  },
+                                                  child: Container(
+                                                    width: 70,
+                                                    height: 25,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                              blurRadius: 7)
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(5),
+                                                        color:
+                                                            Colors.blueAccent),
+                                                    child: Center(
+                                                        child: Text('Update')),
+                                                  ),
+                                                ),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    showDialog(
+                                                        context: context,
+                                                        builder: (BuildContext
+                                                            context) {
+                                                          return AlertDialog(
+                                                            title: Text(
+                                                                'Remove Gmail & App Password'),
+                                                            content: Text(
+                                                                'Do you want to remove gmail and App password from the app?'),
+                                                            actions: [
+                                                              ElevatedButton(
+                                                                  style: ElevatedButton.styleFrom(
+                                                                      backgroundColor:
+                                                                          Colors
+                                                                              .red),
+                                                                  onPressed:
+                                                                      () async {
+                                                                    final res =
+                                                                        await DBHelper
+                                                                            .removegmailApppw();
+                                                                    // ignore: use_build_context_synchronously
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child: Text(
+                                                                      'Yes')),
+                                                              ElevatedButton(
+                                                                  style: ElevatedButton.styleFrom(
+                                                                      backgroundColor: Color.fromARGB(
+                                                                          255,
+                                                                          21,
+                                                                          199,
+                                                                          21)),
+                                                                  onPressed:
+                                                                      () {
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child: Text(
+                                                                      'No'))
+                                                            ],
+                                                          );
+                                                        });
+                                                  },
+                                                  child: Container(
+                                                    width: 70,
+                                                    height: 25,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                              blurRadius: 7)
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(5),
+                                                        color: Color.fromARGB(
+                                                            255, 128, 3, 3)),
+                                                    child: Center(
+                                                        child: Text('Remove')),
+                                                  ),
+                                                ),
+                                              ],
+                                            )
                                           ],
                                         )
                                       : Column(

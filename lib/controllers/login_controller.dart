@@ -28,7 +28,7 @@ class LoginController extends GetxController {
     //   return;
     // }
     for (final admin in _admins) {
-      // Get.snackbar('details', '${admin['username']} ${admin['password']}');
+      //Get.snackbar('details', '${admin['username']} ${admin['password']}');
 
       if (admin['username'] == username && admin['password'] == password) {
         SharedPreferences prefs = await SharedPreferences.getInstance();

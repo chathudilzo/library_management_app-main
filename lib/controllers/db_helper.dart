@@ -35,7 +35,7 @@ class DBHelper {
     //await _database.execute('DROP TABLE IF EXISTS issuedBooks');
     //await _database.execute('DROP TABLE IF EXISTS books');
     //await _database.execute('DROP TABLE IF EXISTS days');
-    //await _database.execute('DROP TABLE IF EXISTS admins');
+    await _database.execute('DROP TABLE IF EXISTS admins');
 
     await _database.execute('''
 CREATE TABLE IF NOT EXISTS emailUpdating(
@@ -1077,6 +1077,18 @@ CREATE TABLE IF NOT EXISTS days(
     return false;
   }
 
+  static Future<bool> removegmailApppw() async {
+    try {
+      final int rowsAffected = await _database
+          .rawUpdate('UPDATE admins SET gmail=NULL, gpassword=NULL WHERE id=1');
+      Get.snackbar('Success', 'Admin Credentials Removed Successfully');
+      return rowsAffected > 0;
+    } catch (e) {
+      Get.snackbar('Error', e.toString(), backgroundColor: Colors.red);
+    }
+    return false;
+  }
+
   static Future<bool> isAdminCredentialsSet() async {
     try {
       final result = await _database
@@ -1101,19 +1113,30 @@ CREATE TABLE IF NOT EXISTS days(
     return false;
   }
 
-  static Future<void> addAdmin(
+  static Future<void> addAdmin(String curUsername, String curPassword,
       String username, String password, String gmail, String gpassword) async {
     try {
-      await _database.rawDelete('DELETE FROM admins');
+      final result = await _database.rawQuery(
+          '''SELECT * FROM admins WHERE username = ? AND password = ?''',
+          [curUsername, curPassword]);
 
-      await _database.rawInsert(
-        'INSERT INTO admins(username,password,gmail,gpassword)'
-        'VALUES (?,?,?,?)',
-        [username, password, gmail, gpassword],
-      );
+      if (result.isNotEmpty) {
+        await _database.rawDelete('DELETE FROM admins');
 
-      Get.snackbar('Success', 'Admin credentials added successfully.',
-          backgroundColor: Colors.green);
+        await _database.rawInsert(
+          'INSERT INTO admins(username,password,gmail,gpassword)'
+          'VALUES (?,?,?,?)',
+          [username, password, gmail, gpassword],
+        );
+
+        Get.snackbar('Success', 'Admin credentials added successfully.',
+            backgroundColor: Colors.green);
+      } else {
+        Get.snackbar(
+            backgroundColor: Colors.red,
+            'ERROR',
+            'Failed to add admin credentials! Current username or password incorrect!');
+      }
     } catch (e) {
       Get.snackbar(
           backgroundColor: Colors.red,

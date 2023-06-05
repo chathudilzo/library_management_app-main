@@ -33,16 +33,22 @@ class _GmailAppPwPopState extends State<GmailAppPwPop> {
                       if (value == null || value.isEmpty) {
                         return 'Please Enter your Gmail';
                       }
+                      if (!value.contains('@gmail.com')) {
+                        return 'Invalid Gmail Address';
+                      }
                     },
                   ),
                   TextFormField(
                     controller: _PWController,
                     decoration: InputDecoration(
                         labelText: 'App Password',
-                        hintText: 'nyop xxxx xxxx xxxx'),
+                        hintText: 'nyopxxxxxxxxxxxx'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please Enter your App Password';
+                      }
+                      if (value.length < 16) {
+                        return 'App Password must have 16 digits';
                       }
                     },
                   ),
