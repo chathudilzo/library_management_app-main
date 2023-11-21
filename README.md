@@ -1,6 +1,13 @@
 #### LibraEase
 LibraEase is a comprehensive application designed to streamline and simplify library operations. It offers a range of features to enhance the management and accessibility of books, members, and transactions. With LibraEase, libraries can efficiently handle tasks such as book issuance, returns, member management, and transaction tracking.
 
+![register](https://github.com/chathudilzo/library_management_app-main/assets/93638679/7d54deca-d602-45fa-8235-35ba4e37206a)
+
+![home](https://github.com/chathudilzo/library_management_app-main/assets/93638679/8b8df6cd-5706-49e4-83d5-da63607e8da2)
+
+![app password](https://github.com/chathudilzo/library_management_app-main/assets/93638679/694d2b3e-6cc9-4954-abf6-dc7371557640)
+
+
 ## Key Features
 View All Books
 LibraEase provides a centralized database that allows librarians to access and view details of all books in their collection. They can easily search, filter, and sort books based on various criteria such as title, author, genre, or ISBN. This ensures librarians can quickly locate specific books and obtain comprehensive information about them.
